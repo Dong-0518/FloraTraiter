@@ -30,6 +30,7 @@ class PartLinker(Linker):
     decoder: ClassVar[dict[str, dict]] = {
         "any": {},
         "clause": {"TEXT": {"NOT_IN": list(".;:,")}},
+        "comma_ok": {"TEXT": {"NOT_IN": list(".;")}},
     }
     # ---------------------
 
@@ -66,8 +67,8 @@ class PartLinker(Linker):
                 "trait": {"ENT_TYPE": {"IN": cls.children}},
             },
             patterns=[
-                "trait+ any* part+",
-                "part+  any* trait+",
+                "trait+ clause* part+",
+                "part+  comma_ok* trait+",
             ],
         )
 
@@ -81,7 +82,7 @@ class PartLinker(Linker):
                 "trait": {"ENT_TYPE": {"IN": cls.child_once}},
             },
             patterns=[
-                "trait+ any* part+",
-                "part+  any* trait+",
+                "trait+ clause* part+",
+                "part+  comma_ok* trait+",
             ],
         )
