@@ -22,6 +22,7 @@ class SubpartLinker(Linker):
     decoder: ClassVar[dict[str, dict]] = {
         "any": {},
         "clause": {"TEXT": {"NOT_IN": list(".;:,")}},
+        "comma_ok": {"TEXT": {"NOT_IN": list(".;")}},
     }
     # ---------------------
 
@@ -58,7 +59,7 @@ class SubpartLinker(Linker):
             },
             patterns=[
                 "trait+   clause* subpart+",
-                "subpart+ clause* trait+",
+                "subpart+ comma_ok* trait+",
             ],
         )
 
@@ -72,7 +73,7 @@ class SubpartLinker(Linker):
                 "trait": {"ENT_TYPE": {"IN": cls.child_once}},
             },
             patterns=[
-                "trait+    any* subpart+",
-                "subpart+  any* trait+",
+                "trait+    clause* subpart+",
+                "subpart+  comma_ok* trait+",
             ],
         )
