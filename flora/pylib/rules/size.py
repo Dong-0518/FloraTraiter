@@ -93,6 +93,18 @@ class Size(Linkable):
         return tuple(d.dim for d in self.dims)
 
     @classmethod
+    def trim_period(cls, span):
+        if not span:
+            return span
+        start = 0
+        while start < len(span) and span[start].text == ".":
+            start += 1
+        end = len(span)
+        while end > start and span[end - 1].text == ".":
+            end -= 1
+        return span[start:end]
+
+    @classmethod
     def size_patterns(cls):
         decoder = {
             "(": {"TEXT": {"IN": t_const.OPEN}},
@@ -168,6 +180,11 @@ class Size(Linkable):
         dims = [Dimension()]
 
         for token in ent:
+            if token.text == ".":
+                continue
+
+            token_lower = token.lower_.strip('.')
+
             if token._.flag == "range_data":
                 dims[-1].min = token._.trait.min
                 dims[-1].low = token._.trait.low
@@ -175,33 +192,33 @@ class Size(Linkable):
                 dims[-1].max = token._.trait.max
 
             elif token._.term in {"metric_length", "imperial_length"}:
-                if dims[-1].units and token.lower_ == "in":
+                if dims[-1].units and token_lower == "in":
                     continue
-                if word := cls.replace.get(token.lower_):
+                if word := cls.replace.get(token_lower):
                     if dims[-1].units is None:
                         dims[-1].units = word
                     else:
                         dims[-1].units += word
 
             elif token._.term == "dim":
-                if token.lower_ != "in":
+                if token_lower != "in":
                     if dims[-1].dim is None:
-                        dims[-1].dim = token.lower_
+                        dims[-1].dim = token_lower
                     else:
-                        dims[-1].dim += token.lower_
+                        dims[-1].dim += token_lower
                     dims[-1].dim = cls.replace.get(dims[-1].dim, dims[-1].dim)
 
             elif token._.term in {"about_term", "quest"}:
                 dims[-1].uncertain = True
 
             elif token._.term == "sex":
-                if word := cls.replace.get(token.lower_):
+                if word := cls.replace.get(token_lower):
                     if dims[-1].sex is None:
                         dims[-1].sex = word
                     else:
                         dims[-1].sex += word
 
-            elif token.lower_ in cls.cross:
+            elif token_lower in cls.cross:
                 dims.append(Dimension())
 
         return dims
@@ -255,6 +272,7 @@ class Size(Linkable):
 
     @classmethod
     def size_match(cls, ent):
+        ent = cls.trim_period(ent)
         dims = cls.scan_tokens(ent)
         cls.fill_units(dims)
         cls.fill_dimensions(dims)
@@ -262,6 +280,7 @@ class Size(Linkable):
 
     @classmethod
     def size_high_only_match(cls, ent):
+        ent = cls.trim_period(ent)
         dims = cls.scan_tokens(ent)
         cls.fill_units(dims)
         cls.fill_dimensions(dims)
@@ -272,13 +291,16 @@ class Size(Linkable):
 
     @classmethod
     def size_double_dim_match(cls, ent):
+        ent = cls.trim_period(ent)
         dims = cls.scan_tokens(ent)
         cls.fill_units(dims)
         cls.fill_dimensions(dims)
 
         trait = cls.fill_trait_data(dims, ent)
-
-        reals = [cls.replace.get(t.lower_, t.lower_) for t in ent if t._.term == "dim"]
+        reals = [
+            cls.replace.get(t.lower_.strip('.'), t.lower_.strip('.'))
+            for t in ent if t._.term == "dim"
+        ]
 
         for real, dim in zip(reals, dims, strict=False):
             dim.dim = real
