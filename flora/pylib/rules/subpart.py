@@ -63,16 +63,28 @@ class Subpart(Linkable):
                     "subpart": {"ENT_TYPE": "subpart_term"},
                 },
                 patterns=[
-                    "leader* ,? leader* subpart+",
-                    "leader* ,? leader* subpart+ - subpart+",
-                    "leader* ,? leader* part+ -?   subpart+",
+                    # === 替换第一条: "leader* ,? leader* subpart+" ===
+                    "leader+ ,? leader+ subpart+",  # 对应: outer, lower lip 或 outer lower lip
+                    "leader+ ,? subpart+",          # 对应: outer, lip 或 outer lip
+                    "subpart+",                     # 对应: lip (没有逗号也没有leader)
+
+                    # === 替换第二条: "leader* ,? leader* subpart+ - subpart+" ===
+                    "leader+ ,? leader+ subpart+ - subpart+",
+                    "leader+ ,? subpart+ - subpart+",
+                    "subpart+ - subpart+",
+
+                    # === 替换第三条: "leader* ,? leader* part+ -?   subpart+" ===
+                    "leader+ ,? leader+ part+ -? subpart+",
+                    "leader+ ,? part+ -? subpart+",
+                    "part+ -? subpart+",
+
+                    # === 下面保持原有不变 ===
                     "- subpart+",
                     "missing part+ -? subpart+",
                     "missing subpart+",
                 ],
             ),
         ]
-
     @classmethod
     def subpart_match(cls, ent):
         frags = {}
