@@ -100,6 +100,7 @@ shape_term,elongate-ovate,elongate-ovate
 shape_term,emarginate,emarginate
 shape_term,ensate,ensate
 shape_term,ensiform,linear
+shape_term,erect,straight
 shape_term,even-pinnate,even-pinnate
 shape_term,falcate,falcate
 shape_term,fasciculate,fasciculate
@@ -199,7 +200,6 @@ shape_term,paripinnate,paripinnate
 shape_term,patelliform,patelliform
 shape_term,pedate,pedate
 shape_term,pedicellate,pedicellate
-shape_term,peltate,peltate
 shape_term,pendulous,pendulous
 shape_term,pentagonal,polygonal
 shape_term,pentangular,polygonal
@@ -287,12 +287,9 @@ shape_term,spikelike,spikelike
 shape_term,squamiform,squamiform
 shape_term,square,square
 shape_term,stalked,stalked
-shape_term,stellate,stellate
-shape_term,stellate-lepidote,stellate-lepidote
-shape_term,stellately,stellate
-shape_term,stelliate,stelliate
 shape_term,stelliform,stelliform
 shape_term,stipitate glandular,stipitate glandular
+shape_term,S-shaped,curved
 shape_term,straight,straight
 shape_term,styliform,styliform
 shape_term,subacute,subacute
@@ -310,7 +307,6 @@ shape_term,subobtuse,subobtuse
 shape_term,suborbicular,orbicular
 shape_term,suborbiculate,orbicular
 shape_term,subovoid,subovoid
-shape_term,subpeltate,subpeltate
 shape_term,subreniform,reniform
 shape_term,subrhombic,subrhombic
 shape_term,subterete,subterete
@@ -337,8 +333,8 @@ shape_term,tripinnate,tripinnate
 shape_term,trullate,trullate
 shape_term,trumpet-shaped,trumpet-shaped
 shape_term,truncate,truncate
-shape_term,tub-shaped,tub-shaped
 shape_term,tubular,tubular
+shape_term,tub-shaped,tubula
 shape_term,turbinate,turbinate
 shape_term,turbinate-campanulate,turbinate-campanulate
 shape_term,twisted,twisted
@@ -348,7 +344,7 @@ shape_term,unicostate,pinnate
 shape_term,unifoliate,unifoliate
 shape_term,unlobed,unlobed
 shape_term,urceolate,urceolate
-shape_term,urn-shaped,urn-shaped
+shape_term,urn-shaped,urceolate
 shape_term,vaginate,vaginate
 shape_term,valvate,valvate
 shape_term,vase-shaped,vase-shaped
@@ -399,3 +395,6 @@ shape_leader,sub,sub
 shape_leader,subequally,subequally
 shape_leader,symmetrically,symmetrically
 shape_leader,vertically,vertically
+shape_term,flexuous,curved
+shape_term,winged,alate
+shape_term,flat,entire

@@ -33,7 +33,6 @@ habit_term,epiphyllous,epiphyllous
 habit_term,epiphyte,epiphytic
 habit_term,epiphytic,epiphytic
 habit_term,equinoctial,equinoctial
-habit_term,erect,erect
 habit_term,escape,escape
 habit_term,eupotamous,eupotamous
 habit_term,euryhaline,euryhaline
@@ -53,7 +52,6 @@ habit_term,precocious,precocious
 habit_term,procumbent,procumbent
 habit_term,prostrate,prostrate
 habit_term,repent,repent
-habit_term,semi-erect,semi-erect
 habit_term,shrubby,shrub
 habit_term,subacaulescent,acaulescent
 habit_term,subcaulescent,acaulescent
@@ -65,7 +63,11 @@ habit_term,upright,upright
 habit_term,vine,vine
 habit_term,vines,vine
 habit_term,virgate,virgate
-habit_tree,tree,tree
-habit_tree,trees,tree
-habit_tree,bush,bush
-habit_tree,bushes,bush
+habit_term,tree,tree
+habit_term,trees,tree
+habit_term,bush,bush
+habit_term,bushes,bush
+habit_term,shrub,shrub
+habit_term,shrubs,shrub
+habit_term,subshrub,shrub
+habit_term,subshrubs,shrub

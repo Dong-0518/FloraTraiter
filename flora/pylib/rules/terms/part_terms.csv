@@ -39,10 +39,6 @@ part_term,bracteoles,bract,flower_part
 part_term,bractlet,bract,flower_part
 part_term,bractlets,bract,flower_part
 part_term,bracts,bract,flower_part
-part_term,branch,branch,plant_part
-part_term,branches,branch,plant_part
-part_term,branchlet,branch,plant_part
-part_term,branchlets,branch,plant_part
 part_term,bud,bud,plant_part
 part_term,buds,bud,plant_part
 part_term,calathid,calathid,inflorescence
@@ -116,7 +112,6 @@ part_term,fascicle,fascicle,plant_part
 part_term,fascicles,fascicles,inflorescence
 part_term,filament,filament,male_flower_part
 part_term,filaments,filament,male_flower_part
-part_term,fl,flower,flower_part
 part_term,fl-buds,flower-buds,flower_part
 part_term,fl-spikes,flower-spikes,inflorescence
 part_term,fld,flowered,flower_part
@@ -164,9 +159,6 @@ part_term,homeothetic,homeothetic,inflorescence
 part_term,hypanthia,hypanthium,flower_part
 part_term,hypanthium,hypanthium,flower_part
 part_term,indehiscent,indehiscent,fruit_part
-part_term,indumenta,indumentum,plant_part
-part_term,indumentum,indumentum,plant_part
-part_term,indumentums,indumentum,plant_part
 part_term,inflorescence,inflorescence,inflorescence
 part_term,inflorescence-axes,inflorescence-axes,inflorescence
 part_term,inflorescences,inflorescence,inflorescence
@@ -333,8 +325,6 @@ part_term,shade-leaf,leaf,leaf_part
 part_term,shade-leaves,leaf,leaf_part
 part_term,sheath,sheath,leaf_part
 part_term,sheaves,sheaves,leaf_part
-part_term,shrub,shrub,plant_part
-part_term,shrubs,shrub,plant_part
 part_term,solitary,solitary,inflorescence
 part_term,spadix,spadix,inflorescence
 part_term,spica,spica,inflorescence
@@ -367,8 +357,6 @@ part_term,stks,stalk,plant_part
 part_term,stock,rootstock,plant_part
 part_term,stolon,stolon,plant_part
 part_term,stolons,stolons,plant_part
-part_term,subshrub,shrub,plant_part
-part_term,subshrubs,shrub,plant_part
 part_term,suture,suture,fruit_part
 part_term,syconium,syconium,inflorescence
 part_term,syncarp,syncarp,fruit_part
@@ -380,8 +368,6 @@ part_term,tetradynamous,tetradynamous,male_flower_part
 part_term,thyrse,thyrse,inflorescence
 part_term,thyrsoid,thyrsoid,inflorescence
 part_term,translator,translator,male_flower_part
-part_term,tree,tree,plant_part
-part_term,trees,tree,plant_part
 part_term,trinucleate,trinucleate,male_flower_part
 part_term,triple umbel,triple umbel,inflorescence
 part_term,trunk,trunk,plant_part
@@ -405,3 +391,16 @@ part_leader,alternate,,
 part_leader,palmately,,
 part_leader,primary,,
 part_leader,secondary,,
+part_term,style,style,flower_part
+part_term,spine,spine,spine
+part_term,spines,spine,spine
+part_term,old branch,old branch,plant_part
+part_term,old branches,old branch,plant_part
+part_term,young branch,young branch,plant_part
+part_term,young branches,young branch,plant_part
+part_term,old branchlet,branch,plant_part
+part_term,old branchlets,branch,plant_part
+part_term,young branchlet,branch,plant_part
+part_term,young branchlets,branch,plant_part
+part_term,flower part,flower part,flower_part
+part_term,flower parts,flower part,flower_part

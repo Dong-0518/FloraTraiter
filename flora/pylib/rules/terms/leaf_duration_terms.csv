@@ -1,5 +1,7 @@
 label,pattern,replace
 leaf_duration,deciduous,deciduous
 leaf_duration,evergreen,evergreen
+leaf_duration,ever-green,evergreen
+leaf_duration,ever green,evergreen
 leaf_duration,semi-deciduous,semi-deciduous
 leaf_duration,semi-evergreen,semi-evergreen

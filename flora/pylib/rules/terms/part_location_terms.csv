@@ -14,9 +14,6 @@ joined,synantherous,
 joined,syncarpous,
 joined,synfilamentous,
 joined,synsepalous,
-location,abaxial,abaxial
-location,above,above
-location,adaxial,adaxial
 location,adventitious,adventitious
 location,anterior,anterior
 location,apical,apical
@@ -51,7 +48,6 @@ location,proximal,proximal
 location,proximally,proximal
 location,radical,radical
 location,stemonozone,stemonozone
-location,style,style
 location,subcentric,subcentric
 location,subtended,subtended
 location,subtending,subtending
@@ -66,3 +62,4 @@ location_leader,at,
 location_leader,embracing,
 location_leader,immersed,
 location_leader,from,
+

@@ -14,6 +14,7 @@ subpart_term,axes,axis,subpart
 subpart_term,axil,axil,subpart
 subpart_term,axils,axil,subpart
 subpart_term,axis,axis,subpart
+subpart_term,upper parts,apex,subpart
 subpart_term,base,base,subpart
 subpart_term,bases,base,subpart
 subpart_term,bilobed,bilobate,subpart
@@ -43,8 +44,6 @@ subpart_term,intervenium,intervenium,subpart
 subpart_term,leaf axil,leaf-axil,subpart
 subpart_term,leaf-axil,leaf-axil,subpart
 subpart_term,lf-axil,leaf-axil,subpart
-subpart_term,limb,limb,subpart
-subpart_term,limbs,limb,subpart
 subpart_term,lobe,lobe,subpart
 subpart_term,lobed,lobe,subpart
 subpart_term,lobes,lobe,subpart
@@ -69,12 +68,12 @@ subpart_term,rays,ray,subpart
 subpart_term,reticulum,reticulum,subpart
 subpart_term,rhachis,rhachis,subpart
 subpart_term,rim,rim,subpart
+subpart_term,scale,scales,subpart
 subpart_term,scales,scales,subpart
+subpart_term,scaly,scales,subpart
 subpart_term,segment,segment,subpart
 subpart_term,sinus,sinus,subpart
 subpart_term,sinuses,sinus,subpart
-subpart_term,spine,spine,subpart
-subpart_term,spines,spine,subpart
 subpart_term,subcallose,subcallose,subpart
 subpart_term,sulci,sulcus,subpart
 subpart_term,sulcus,sulcus,subpart
@@ -92,3 +91,8 @@ subpart_term,venule,vein,subpart
 subpart_term,venules,vein,subpart
 subpart_term,villi,villi,subpart
 subpart_term,villus,villus,subpart
+subpart_term,abaxially,abaxial,subpart
+subpart_term,adaxially,adaxial,subpart
+subpart_term,abaxial,abaxial,subpart
+subpart_term,adaxial,adaxial,subpart
+subpart_term,above,above,subpart
